@@ -27,5 +27,23 @@ class User:
          Saves objects to the list of users
          """
          self.user_list.append(self)
+         
+         
+         @classmethod
+         def user_exists(cls,logged_user):
+             """
+             Checks if user exists
+
+             Args:
+                 logged_user: username of logged user used to search for user
+                 return: True if user exists
+             """
+             for user in cls.user_list:
+                 if user.username ==logged_user:
+                     return True
+                 return False
+                 
+                     
+
      
      

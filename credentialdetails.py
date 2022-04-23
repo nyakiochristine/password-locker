@@ -35,6 +35,13 @@ class credential:
         retuns creds list
         """
         return cls.cred_list
+    
+    def delete_creds(self):
+        """
+        delets saved credentials if no longer needed by user
+        """
+        credential.cred_list.remove(self)
+        
         
         
         

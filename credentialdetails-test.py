@@ -1,5 +1,5 @@
 import unittest
-from credentialdetails import credential
+from credentialdetails import Credential
 
 class TestCredentials(unittest.TestCase):
     """
@@ -11,14 +11,14 @@ class TestCredentials(unittest.TestCase):
         """
         runs before testcases are run
         """
-        self.new_credential = credential('instagram','kriss-cream','beddes')
+        self.new_credential = Credential('instagram','kriss-cream','beddes')
         
         
     def tearDown(self):
         """
         cleanup after testcases are run
         """
-        credential.cred_list = []
+        Credential.cred_list = []
         
     def test_init(self):
         """
@@ -27,6 +27,22 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(self.new_credential.account_name,'instagram')
         self.assertEqual(self.new_credential.username, 'kriss-cream')
         self.assertEqual(self.new_credential.password, 'beddes')
+        
+    def test_save_creds(self):
+        """
+        check if its possible to save info in the cred_list
+        """
+        self.new_credential.save_creds()
+        self.assertEqual(len(Credential.cred_list),1)
+        
+        
+    def test_save_multiple_creds(self):
+        """
+        check if its possible to save many cred objects on the list
+        
+        """
+        self.new_credential.save_creds()
+        
         
         
         

@@ -26,7 +26,17 @@ class credential:
         saving credential information to the cred_list
         """
         
-        self.cred_list.append
+        self.cred_list.append(self)
+        
+        
+    @classmethod
+    def display_creds(cls):
+        """
+        retuns creds list
+        """
+        return cls.cred_list
+        
+        
         
     
         

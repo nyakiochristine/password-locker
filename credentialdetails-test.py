@@ -52,6 +52,16 @@ class TestCredentials(unittest.TestCase):
         """
         self.assertEqual(Credential.display_creds(), Credential.cred_list )
         
+    def test_delete_creds(self):
+        """
+        test case to check if one can remove creds that one does not need
+        """
+        self.new_credential.save_creds()
+        test_credential= Credential('pinterest','kennie','labr')
+        test_credential.delete_creds
+        
+        
+        self.assertEqual(len(Credential.cred_list),1)
         
         
         

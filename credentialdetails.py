@@ -16,7 +16,19 @@ class credential:
             username:new username
             password:new password
         """
+        self.account_name = account_name
+        self.username = username
+        self.password = password
+    
+    
+    def save_creds(self):
+        """
+        saving credential information to the cred_list
+        """
         
+        self.cred_list.append
+        
+    
         
     
     

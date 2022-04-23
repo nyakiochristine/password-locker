@@ -43,6 +43,28 @@ class credential:
         credential.cred_list.remove(self)
         
         
+    @classmethod
+    def generate_password(cls,username):
+        """
+        to generate random passcodes
+        """
+        randomSource = string.ascii_letters + string.digits + string.punctuation
+        password +=random.choice(string.ascii_lowercase)
+        password += random.choice(string.ascii_uppercase)
+        password += random.choice(string.digits)
+        password += random.choice(string.punctuation)
+        
+        for i in range (6):
+            password += random.choice(randomSource)
+        listPassword =list(password)
+        random.SystemRandom().shuffle(listPassword)
+        password = ''.join(listPassword)
+        return password
+            
+        
+    
+        
+        
         
         
     

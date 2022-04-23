@@ -42,6 +42,17 @@ class TestCredentials(unittest.TestCase):
         
         """
         self.new_credential.save_creds()
+        test_credential = Credential('pinterest','kennie','labr')
+        test_credential.save_creds()
+        self.assertEqual(len(Credential.cred_list),2)
+        
+    def test_display_creds(self):
+        """
+        test if credential details can be displayed
+        """
+        self.assertEqual(Credential.display_creds(), Credential.cred_list )
+        
+        
         
         
         

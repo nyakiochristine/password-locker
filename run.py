@@ -85,11 +85,31 @@ def main():
         runs before other functions
         """
         while True:
-            selector = input("Welcome to this password manager! Type in the following:\n \n \"login\"- to login to your account \n to \"register\"- to register")
+            print("\033c")
+            selector = input("Welcome to this password manager! Type in the following:\n \n \"log\"- to login to your account \n to \"register\"- to register \n \"exit\"- to exit from application \n \n ")
+            print("."*14)
             
             
-            if selector == "login":
-                print ("Welcome back. Please TYPE in the following \n new to log into your account")
+            if selector =="register":
+                print("\033c")
+                f_name =input("Enter your first name \n")
+                l_name =input("Enter your last name \n")
+                u_name =input("Enter your username \n")
+                password =input("Enter your password \n")
+                register_user(f_name,l_name,u_name,password)
+                print("\n")
+                print("Account registered successfully!")
+                anykey= input("Press any key to proceed...")
+                continue
+                
+                             
+         
+         
+            
+            
+            
+           # if selector == "login":
+              #  print ("Welcome back. Please TYPE in the following \n new to log into your account")
             
             
         

@@ -1,7 +1,8 @@
 import string
 import random
 
-class credential:
+
+class Credential:
     """
     Generates new instances of user credential details
     
@@ -49,10 +50,10 @@ class credential:
         to generate random passcodes
         """
         randomSource = string.ascii_letters + string.digits + string.punctuation
-        password +=random.choice(string.ascii_lowercase)
-        password += random.choice(string.ascii_uppercase)
-        password += random.choice(string.digits)
-        password += random.choice(string.punctuation)
+        password +=random.choose(string.ascii_lowercase)
+        password += random.choose(string.ascii_uppercase)
+        password += random.choose(string.digits)
+        password += random.choose(string.punctuation)
         
         for i in range (6):
             password += random.choice(randomSource)
@@ -60,6 +61,8 @@ class credential:
         random.SystemRandom().shuffle(listPassword)
         password = ''.join(listPassword)
         return password
+    
+    
             
         
     

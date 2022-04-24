@@ -101,6 +101,10 @@ def main():
                 print("Account registered successfully!")
                 anykey= input("Press any key to proceed...")
                 continue
+            
+            else if selector =="login":
+                print("\033c")
+                logged_in= login_user()
                 
                              
          

@@ -102,9 +102,14 @@ def main():
                 anykey= input("Press any key to proceed...")
                 continue
             
-            else if selector =="login":
+            elif selector =="login":
                 print("\033c")
-                logged_in= login_user()
+                logged_in = login_user()
+                
+                while logged_in:
+                    print("\033c")
+                    print(" Welcome back to this password manager.Type the following: \n ne-to create a new credential details,\n save-to save new credential details, \n display-to display all credential details,\n quit-to leave this section")
+                
                 
                              
          
@@ -112,8 +117,6 @@ def main():
             
             
             
-           # if selector == "login":
-              #  print ("Welcome back. Please TYPE in the following \n new to log into your account")
             
             
         

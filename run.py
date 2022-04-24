@@ -62,6 +62,15 @@ def login_user():
         return Credential.generate_password(username)
     
     
+    def delete_credentials(creds):
+        """
+        function to delete credentials
+        """
+        return Credential.delete_credentials(creds)
+    
+    
+    
+    
     
         
 
@@ -76,7 +85,12 @@ def main():
         runs before other functions
         """
         while True:
-            selector = input("Welcome to this password manager! Type in the following")
+            selector = input("Welcome to this password manager! Type in the following:\n \n \"login\"- to login to your account \n to \"register\"- to register")
+            
+            
+            if selector == "login":
+                print ("Welcome back. Please TYPE in the following \n new to log into your account")
+            
             
         
 

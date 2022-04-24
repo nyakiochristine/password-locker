@@ -48,10 +48,22 @@ def login_user():
         Credential.cred_list.append(creds)
         
         
-    ef display_credentials():
+    def display_credentials():
         """
         method to display credentials
         """
+        return Credential.cred_list
+    
+    
+    def generate_password(username):
+        """
+        random passcode
+        """
+        return Credential.generate_password(username)
+    
+    
+    
+        
 
         
         
